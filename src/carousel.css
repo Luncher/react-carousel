@@ -1,0 +1,79 @@
+.carousel {
+  position: relative;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item {
+  display: none;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.carousel-item-prev {
+  top: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  animation: slideOut 1s;
+}
+
+.carousel-item-current {
+  display: block;
+  position: relative;
+  animation: slideIn 1s;
+  z-index: 15;
+}
+
+.carousel-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.carousel-dot-bottom {
+  bottom: 8px;
+}
+
+.carousel-dot-item {
+  display: inline-block;
+  margin: 0;
+  cursor: pointer;
+  width: 14px;
+  height: 4px;
+  border-radius: 1px;
+  background-color: gray;
+  transition: width .3s;
+}
+
+.carousel-dot-item + .carousel-dot-item {
+  margin-left: 6px;
+}
+
+.carousel-dot-item-active {
+  width: 24px;
+  background-color: lightblue;
+}
