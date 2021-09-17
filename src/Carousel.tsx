@@ -1,4 +1,4 @@
-import React, { Children, useState, useCallback, useEffect, cloneElement, isValidElement, ReactNode } from "react"
+import { Children, useState, useCallback, useEffect, cloneElement, isValidElement, ReactNode, useMemo } from "react"
 import cns from 'classnames'
 
 import './carousel.css'
@@ -28,22 +28,32 @@ export default function Carousel({
   beforeChange,
   afterChange
 }: Props) {
-  const [position, setPosition] = useState({
-    prev: 0,
-    cur: 0
-  })
+  const [position, setPosition] = useState({ prev: 0, cur: 0 })
 
-  const cnt = Children.map(children, (it: ReactNode, index) => {
-    if (!isValidElement(it)) {
-      console.warn('Carousel children must be an valid element')
-      return null
-    }
-    const classNames = cns(it.props.className, 'carousel-item', {
-      'carousel-item-current': index === position.cur,
-      'carousel-item-prev': index !== position.cur && index === position.prev
+  const cnt = useMemo(() => 
+    Children.map(children, (it: ReactNode, index) => {
+      if (!isValidElement(it)) {
+        console.warn('Carousel children must be an valid element')
+        return null
+      }
+      const classNames = cns(it.props.className, 'carousel-item', {
+        'carousel-item-initial': position.prev === position.cur && position.prev === index,
+        'carousel-item-current': index === position.cur && index !== position.prev,
+        'carousel-item-prev': index !== position.cur && index === position.prev
+      })
+      return cloneElement(it, { className: classNames })
     })
-    return cloneElement(it, { className: classNames })
-  })
+  , [children, position])
+
+  const count = cnt?.length ?? 0
+
+  useEffect(() => {
+    if (!autoplay) return
+    const handle = window.setInterval(() => {
+      setPosition(v => ({ prev: v.cur, cur: (v.cur + 1) % count }))
+    }, interval)
+    return () => window.clearInterval(handle)
+  }, [autoplay, interval, count])
 
   const handleChange = useCallback(
     (value: number) => {
@@ -57,7 +67,7 @@ export default function Carousel({
     afterChange?.(position.cur)
   }, [position.cur, afterChange])
 
-  if (!cnt || !cnt.length) {
+  if (count === 0) {
     return null
   }
 
@@ -70,12 +80,11 @@ export default function Carousel({
         value={position.cur}
         onChange={handleChange}
         position={dotPosition}
-        dotCount={cnt.length}
+        dotCount={count}
       />
     </div>
   )
 }
-
 
 interface CarouselDotProps {
   position?: DotPosition

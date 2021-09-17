@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <Carousel>
+      <Carousel autoplay>
         <div>
           <p style={style}>1</p>
         </div>

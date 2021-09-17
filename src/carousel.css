@@ -11,6 +11,10 @@
   display: none;
 }
 
+.carousel-item-initial {
+  display: block;
+}
+
 @keyframes slideIn {
   from {
     transform: translateX(100%);
@@ -43,15 +47,15 @@
 .carousel-item-current {
   display: block;
   position: relative;
+  z-index: 11;
   animation: slideIn 1s;
-  z-index: 15;
 }
 
 .carousel-dot {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 20;
+  z-index: 12;
 }
 
 .carousel-dot-bottom {
