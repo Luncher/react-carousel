@@ -1,6 +1,6 @@
 {
   "name": "react-carousel-lite",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -25,7 +25,8 @@
     "classnames": "^2.3.1"
   },
   "peerDependencies": {
-    "react": ">=^17.0.2"
+    "react": ">=^17.0.2",
+    "react-dom": ">=^17.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
