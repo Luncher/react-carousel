@@ -1,0 +1,6 @@
+/.mdx
+/.docz
+/declaration
+/src
+/tsconfig*
+/doczrc.js

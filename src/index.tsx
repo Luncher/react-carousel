@@ -1,7 +1,7 @@
-import { Children, useState, useCallback, useEffect, cloneElement, isValidElement, ReactNode, useMemo, CSSProperties } from "react"
+import React, { Children, useState, useCallback, useEffect, cloneElement, isValidElement, ReactNode, useMemo, CSSProperties } from "react"
 import cns from 'classnames'
 
-import './style.css'
+import './style.less'
 
 export type DotPosition = 'left' | 'right' | 'top' | 'bottom'
 

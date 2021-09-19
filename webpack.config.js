@@ -8,9 +8,9 @@ module.exports = {
   devtool: devMode ? 'inline-source-map' : 'hidden-source-map',
   mode: devMode ? 'development' : 'production',
   output: {
-    filename: devMode ? 'index.js' : 'index.min.js',
+    filename: devMode ? 'index.dev.js' : 'index.js',
     path: path.resolve(__dirname, 'dist'),
-    library: 'react-ts-template',
+    library: 'react-carousel-lite',
     libraryTarget: 'umd'
   },
   externals: ['react', 'react-dom'],
