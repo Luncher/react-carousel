@@ -24,7 +24,7 @@ export default function Carousel({
   effect = 'slide',
   interval = 2000,
   children,
-  dotPosition,
+  dotPosition = 'bottom',
   beforeChange,
   afterChange
 }: Props) {
