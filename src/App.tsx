@@ -13,7 +13,19 @@ function App() {
 
   return (
     <div className="App">
-      <Carousel autoplay>
+      <Carousel autoplay effect='slide' interval={2000} dotPosition='left' easing="step-end">
+        <div>
+          <p style={style}>1</p>
+        </div>
+        <div>
+          <p style={style}>2</p>
+        </div>
+        <div>
+          <p style={style}>3</p>
+        </div>
+      </Carousel>
+      <div style={{ margin: '10px 0' }}></div>
+      <Carousel autoplay effect='slide' interval={2000} dotPosition='left' easing="step-start">
         <div>
           <p style={style}>1</p>
         </div>
