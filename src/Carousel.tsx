@@ -1,18 +1,16 @@
-import { Children, useState, useCallback, useEffect, cloneElement, isValidElement, ReactNode, useMemo } from "react"
+import { Children, useState, useCallback, useEffect, cloneElement, isValidElement, ReactNode, useMemo, CSSProperties } from "react"
 import cns from 'classnames'
 
 import './carousel.css'
 
 export type DotPosition = 'left' | 'right' | 'top' | 'bottom'
 
-export type EasingType = 'linear'
-
-export type EffectType = 'scroll' | 'fade'
+export type EffectType = 'slide' | 'fade'
 
 export interface Props {
   autoplay?: boolean
   dotPosition?: DotPosition
-  easing?: EasingType
+  easing?: CSSProperties['animationTimingFunction']
   effect?: EffectType
   interval?: number
   afterChange?: (current: number) => void
@@ -22,7 +20,9 @@ export interface Props {
 
 export default function Carousel({
   autoplay,
-  interval = 1000,
+  easing = 'linear',
+  effect = 'slide',
+  interval = 2000,
   children,
   dotPosition,
   beforeChange,
@@ -36,14 +36,19 @@ export default function Carousel({
         console.warn('Carousel children must be an valid element')
         return null
       }
+      const isCurrent = index === position.cur && index !== position.prev
+      const isPrev = index !== position.cur && index === position.prev
+      const isInitial = position.prev === position.cur && position.prev === index
       const classNames = cns(it.props.className, 'carousel-item', {
-        'carousel-item-initial': position.prev === position.cur && position.prev === index,
-        'carousel-item-current': index === position.cur && index !== position.prev,
-        'carousel-item-prev': index !== position.cur && index === position.prev
+        'carousel-item-initial': isInitial,
+        'carousel-item-current': isCurrent,
+        [`carousel-item-current-${effect}`]: isCurrent,
+        'carousel-item-prev': isPrev,
+        [`carousel-item-prev-${effect}`]: isPrev
       })
-      return cloneElement(it, { className: classNames })
+      return cloneElement(it, { className: classNames, style: { animationTimingFunction: easing } })
     })
-  , [children, position])
+  , [children, position, effect, easing])
 
   const count = cnt?.length ?? 0
 
@@ -68,7 +73,7 @@ export default function Carousel({
   }, [position.cur, afterChange])
 
   if (count === 0) {
-    return null
+    throw new Error('Invalid Carousel Children')
   }
 
   return (
