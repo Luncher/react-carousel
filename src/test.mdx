@@ -1,0 +1,38 @@
+---
+name: Carousel
+route: /
+---
+
+import { CSSProperties } from 'react'
+import { Playground } from 'docz'
+import Carousel from './index.tsx'
+
+# Carousel Demo
+
+## Basic usage
+
+<Playground>
+  {
+    () => {
+      const style = {
+        lineHeight: '150px',
+        textAlign: 'center',
+        background: '#364d79',
+        color: '#fff',
+        margin: 0,
+      }
+      return (
+      <Carousel autoplay>
+        <div>
+          <p style={style}>1</p>
+        </div>
+        <div>
+          <p style={style}>2</p>
+        </div>
+        <div>
+          <p style={style}>3</p>
+        </div>
+      </Carousel>
+    )}
+  }
+</Playground>
