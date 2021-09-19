@@ -13,8 +13,7 @@ A tiny React Carousel Component.
 
 >import 'react-carousel-lite/dist/index.css'
 
-
-### 
+### Usage
 
 ```typescript
 import Carousel from 'react-carousel-lite'
