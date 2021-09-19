@@ -1,23 +1,51 @@
-# React TypeScript Template
+# React Carousel
 
-Quickly create and configure a new react component library project.
+A tiny React Carousel Component.
 
 ## Quick Start
 
-- git clone git@github.com:Luncher/react-ts-template.git
+### install
 
-- yarn
+>yarn add react-carousel-lite -D
 
-- adjust webpack/babel configure [optional]
 
-## Task List
+### import styles
 
-- [x] TypeScript
-- [ ] Babel/Webpack
-  - [x] Compiler/Polyfill
-  - [ ] Multi Module Style Support
-  - [ ] Tree Sharking
-- [ ] Eslint
-- [x] Styles(`less`)
-- [ ] Testing
-- [x] Document(`Docz`)
+>import 'react-carousel-lite/dist/index.css'
+
+
+### 
+
+```typescript
+import Carousel from 'react-carousel-lite'
+
+export function App() {
+  return (
+    <Carousel autoplay>
+      // {...content}
+    </Carousel>
+  )
+}
+
+```
+
+## Props
+
+- autoplay
+>default: false
+
+- dotPosition
+>export type DotPosition = 'left' | 'right' | 'top' | 'bottom'
+
+- easing
+> css animationTimingFunction
+
+- effect
+>export type EffectType = 'slide' | 'fade'
+
+- interval
+>ms
+
+- afterChange/beforeChange
+
+- children
