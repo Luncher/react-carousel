@@ -1,5 +1,9 @@
 # React Carousel
 
+![GitHub](https://img.shields.io/github/license/Luncher/react-carousel?style=for-the-badge)
+![npm](https://img.shields.io/npm/v/react-carousel?style=for-the-badge)
+![Travis (.com)](https://img.shields.io/travis/com/Luncher/react-carousel?style=for-the-badge)
+
 A tiny React Carousel Component.
 
 ## Quick Start
