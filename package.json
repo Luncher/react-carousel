@@ -20,7 +20,7 @@
     "build:dev": "cross-env NODE_ENV=development webpack",
     "build:prod": "cross-env NODE_ENV=production webpack",
     "build": "npm-run-all clean build:prod build:dev",
-    "prepublishOnly": "npm-run-all clean lint typing copy:typing build:prod"
+    "prepublishOnly": "npm-run-all clean lint test typing copy:typing build:prod"
   },
   "keywords": [],
   "author": "chen",
