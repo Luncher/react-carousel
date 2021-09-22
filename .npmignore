@@ -7,3 +7,8 @@
 /__snapshots__
 /__mocks__
 /test
+babel.config.json
+gatsby-config.js
+jest.config.ts
+jest-setup.ts
+webpack.config.js
