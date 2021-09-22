@@ -1,0 +1,280 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders autoplay correctly 1`] = `
+<div
+  className="carousel"
+>
+  <div
+    className="carousel-inner"
+  >
+    <div
+      className="carousel-item carousel-item-initial"
+      style={
+        Object {
+          "animationTimingFunction": "linear",
+        }
+      }
+    >
+      <p
+        style={
+          Object {
+            "background": "#364d79",
+            "color": "#fff",
+            "lineHeight": "150px",
+            "margin": 0,
+            "textAlign": "center",
+          }
+        }
+      >
+        1
+      </p>
+    </div>
+    <div
+      className="carousel-item"
+      style={
+        Object {
+          "animationTimingFunction": "linear",
+        }
+      }
+    >
+      <p
+        style={
+          Object {
+            "background": "#364d79",
+            "color": "#fff",
+            "lineHeight": "150px",
+            "margin": 0,
+            "textAlign": "center",
+          }
+        }
+      >
+        2
+      </p>
+    </div>
+    <div
+      className="carousel-item"
+      style={
+        Object {
+          "animationTimingFunction": "linear",
+        }
+      }
+    >
+      <p
+        style={
+          Object {
+            "background": "#364d79",
+            "color": "#fff",
+            "lineHeight": "150px",
+            "margin": 0,
+            "textAlign": "center",
+          }
+        }
+      >
+        3
+      </p>
+    </div>
+  </div>
+  <div
+    className="carousel-dot carousel-dot-bottom"
+  >
+    <p
+      className="carousel-dot-item carousel-dot-item-active"
+      onClick={[Function]}
+    />
+    <p
+      className="carousel-dot-item"
+      onClick={[Function]}
+    />
+    <p
+      className="carousel-dot-item"
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`renders autoplay, effect, dotPosition correctly 1`] = `
+<div
+  className="carousel"
+>
+  <div
+    className="carousel-inner"
+  >
+    <div
+      className="carousel-item carousel-item-initial"
+      style={
+        Object {
+          "animationTimingFunction": "linear",
+        }
+      }
+    >
+      <p
+        style={
+          Object {
+            "background": "#364d79",
+            "color": "#fff",
+            "lineHeight": "150px",
+            "margin": 0,
+            "textAlign": "center",
+          }
+        }
+      >
+        1
+      </p>
+    </div>
+    <div
+      className="carousel-item"
+      style={
+        Object {
+          "animationTimingFunction": "linear",
+        }
+      }
+    >
+      <p
+        style={
+          Object {
+            "background": "#364d79",
+            "color": "#fff",
+            "lineHeight": "150px",
+            "margin": 0,
+            "textAlign": "center",
+          }
+        }
+      >
+        2
+      </p>
+    </div>
+    <div
+      className="carousel-item"
+      style={
+        Object {
+          "animationTimingFunction": "linear",
+        }
+      }
+    >
+      <p
+        style={
+          Object {
+            "background": "#364d79",
+            "color": "#fff",
+            "lineHeight": "150px",
+            "margin": 0,
+            "textAlign": "center",
+          }
+        }
+      >
+        3
+      </p>
+    </div>
+  </div>
+  <div
+    className="carousel-dot carousel-dot-left"
+  >
+    <p
+      className="carousel-dot-item carousel-dot-item-active"
+      onClick={[Function]}
+    />
+    <p
+      className="carousel-dot-item"
+      onClick={[Function]}
+    />
+    <p
+      className="carousel-dot-item"
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`renders correctly 1`] = `
+<div
+  className="carousel"
+>
+  <div
+    className="carousel-inner"
+  >
+    <div
+      className="carousel-item carousel-item-initial"
+      style={
+        Object {
+          "animationTimingFunction": "linear",
+        }
+      }
+    >
+      <p
+        style={
+          Object {
+            "background": "#364d79",
+            "color": "#fff",
+            "lineHeight": "150px",
+            "margin": 0,
+            "textAlign": "center",
+          }
+        }
+      >
+        1
+      </p>
+    </div>
+    <div
+      className="carousel-item"
+      style={
+        Object {
+          "animationTimingFunction": "linear",
+        }
+      }
+    >
+      <p
+        style={
+          Object {
+            "background": "#364d79",
+            "color": "#fff",
+            "lineHeight": "150px",
+            "margin": 0,
+            "textAlign": "center",
+          }
+        }
+      >
+        2
+      </p>
+    </div>
+    <div
+      className="carousel-item"
+      style={
+        Object {
+          "animationTimingFunction": "linear",
+        }
+      }
+    >
+      <p
+        style={
+          Object {
+            "background": "#364d79",
+            "color": "#fff",
+            "lineHeight": "150px",
+            "margin": 0,
+            "textAlign": "center",
+          }
+        }
+      >
+        3
+      </p>
+    </div>
+  </div>
+  <div
+    className="carousel-dot carousel-dot-bottom"
+  >
+    <p
+      className="carousel-dot-item carousel-dot-item-active"
+      onClick={[Function]}
+    />
+    <p
+      className="carousel-dot-item"
+      onClick={[Function]}
+    />
+    <p
+      className="carousel-dot-item"
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
