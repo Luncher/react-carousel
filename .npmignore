@@ -4,3 +4,6 @@
 /src
 /tsconfig*
 /doczrc.js
+/__snapshots__
+/__mocks__
+/test
