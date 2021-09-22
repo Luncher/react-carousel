@@ -117,7 +117,7 @@ function CarouselDot({
       'carousel-dot-item-active': i === value
     })
     cnt.push(
-      <p className={itemClassNames} onClick={() => onChange(i)}></p>
+      <p key={i} className={itemClassNames} onClick={() => onChange(i)}></p>
     )
   }
 
