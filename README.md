@@ -10,7 +10,7 @@ A tiny React Carousel Component.
 
 ### install
 
->yarn add react-carousel-lite -D
+>yarn add react-carousel-lite -S
 
 
 ### import styles
