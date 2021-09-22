@@ -3,3 +3,4 @@ gatsby-config.js
 .eslintrc.js
 
 /dist
+/declaration
