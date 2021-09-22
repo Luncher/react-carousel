@@ -34,21 +34,14 @@ export function App() {
 
 ## Props
 
-- autoplay
->default: false
+|     Name     |                   Type                   | Default |                    Description                     |
+| :----------: | :--------------------------------------: | :-----: | :------------------------------------------------: |
+|   autoplay   |                 Boolean                  |  false  | A boolean indicates whether to play automatically  |
+| dotPosition  |          left/right/top/bottom           | bottom  |               Carousel dot position                |
+|    easing    | CSSProperties['animationTimingFunction'] | linear  |            css animationTimingFunction             |
+|    effect    |                slide/fade                |  slide  |                  The effect type                   |
+|   interval   |                  Number                  | 2000 ms |       The time interval of the slider change       |
+| beforeChange |                 Function                 |  NOOP   | beforeChange will be triggered before slide change |
+| afterChange  |                 Function                 |  NOOP   | afterChange will be triggered after slide changed  |
+|   children   |                ReactNode                 |    -    |                   Slide content                    |
 
-- dotPosition
->export type DotPosition = 'left' | 'right' | 'top' | 'bottom'
-
-- easing
-> css animationTimingFunction
-
-- effect
->export type EffectType = 'slide' | 'fade'
-
-- interval
->ms
-
-- afterChange/beforeChange
-
-- children
